@@ -51,5 +51,18 @@ form > button:hover{
  color:black;
  font-size: 1.5rem;
  display: flex;
+ padding: .4rem .5rem;
+ gap:0.7rem;
  justify-content: space-between;
+ align-items: center;
+ transition: all 0.3s ease;
+}
+
+.completed-btn, .incompleted-btn{
+    padding: .5rem;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5 ;
 }

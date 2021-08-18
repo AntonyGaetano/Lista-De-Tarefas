@@ -49,9 +49,28 @@ const Add=(event)=>{
   Valor_input.focus();
 }
 
+const deleteAndeCheck = (e) =>{
+
+   const item = e.target;
+
+   if(item.classList[0] === "incompleted-btn"){
+    const Total = (item.parentElement).parentElement    
+    Total.remove()
+    
+   }
+   else if(item.classList[0] === "completed-btn"){
+    const Total = (item.parentElement).parentElement
+    Total.classList.toggle('completed')
+   
+   }
+}
+
 //Eventos
 
 Botao.addEventListener("click",Add);
+Lista.addEventListener("click",deleteAndeCheck);
+
+
 
 
 
