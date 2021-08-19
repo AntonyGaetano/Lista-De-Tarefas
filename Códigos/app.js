@@ -1,4 +1,5 @@
-
+var LocalStore = [];
+var ChaveStor = [];
 // Atribuições de variaveis 
 
 const Valor_input = document.querySelector(".the-input-one");
@@ -10,9 +11,14 @@ const Lista = document.querySelector(".the-list");
 
  //Funções
 
-
+var cont = 0;
 const Add=(event)=>{
   event.preventDefault();
+
+  LocalStore.push(Valor_input.value);
+  ChaveStor.push("nome"+[cont])
+  localStorage.setItem(ChaveStor[cont],LocalStore[cont])
+  cont++;
 
   const Div = document.createElement('div');
   Div.classList.add("the-div");
