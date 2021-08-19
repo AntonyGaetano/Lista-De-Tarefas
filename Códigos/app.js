@@ -12,13 +12,17 @@ const Lista = document.querySelector(".the-list");
  //Funções
 
 var cont = 0;
-const Add=(event)=>{
-  event.preventDefault();
 
+const Salvar=()=>{
   LocalStore.push(Valor_input.value);
   ChaveStor.push("nome"+[cont])
   localStorage.setItem(ChaveStor[cont],LocalStore[cont])
   cont++;
+}
+const Add=(event)=>{
+  event.preventDefault();
+
+  Salvar();
 
   const Div = document.createElement('div');
   Div.classList.add("the-div");
