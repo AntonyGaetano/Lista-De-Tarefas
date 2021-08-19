@@ -19,7 +19,7 @@ const Add=(event)=>{
 
   const Li = document.createElement('li');
   Li.classList.add("the-list")
-  Li.innerHTML = (Valor_input.value == "" ? "Deus é fiel" : Valor_input.value);
+  Li.innerHTML = (Valor_input.value == "" ? alert("É preciso que informe uma tarefa para ser adicionada") : Valor_input.value);
 
   Div.appendChild(Li);
 
@@ -52,14 +52,15 @@ const Add=(event)=>{
 const deleteAndeCheck = (e) =>{
 
    const item = e.target;
+   const Total = (item.parentElement).parentElement
+
 
    if(item.classList[0] === "incompleted-btn"){
-    const Total = (item.parentElement).parentElement    
-    Total.remove()
-    
+    Total.classList.add('fall')
+    Total.addEventListener("transitionend", ()=>{Total.remove()})
+
    }
    else if(item.classList[0] === "completed-btn"){
-    const Total = (item.parentElement).parentElement
     Total.classList.toggle('completed')
    
    }

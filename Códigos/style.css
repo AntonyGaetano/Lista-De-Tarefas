@@ -23,10 +23,12 @@ form > input, form > button{
 }
 
 form > button{
-    color:black;
-    background-color:white;
+    color:white;
+    background-color:blue;
     cursor:pointer;
     transition: all 0.5s ease;
+    width: 60px;
+    border-radius: 6px;
 }
 
 form > button:hover{
@@ -62,7 +64,16 @@ form > button:hover{
     padding: .5rem;
 }
 
+.fa-trash, .fa-check{
+ pointer-events: none;
+}
+
 .completed{
     text-decoration: line-through;
     opacity: 0.5 ;
+}
+
+.fall{
+    transform: translate(8rem) rotate(20deg);
+    opacity: 0;
 }
