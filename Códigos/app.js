@@ -10,7 +10,7 @@ const Lista = document.querySelector(".the-list");
 
 
  //Funções
-
+/*
 var cont = 0;
 
 const Salvar=()=>{
@@ -18,11 +18,11 @@ const Salvar=()=>{
   ChaveStor.push("nome"+[cont])
   localStorage.setItem(ChaveStor[cont],LocalStore[cont])
   cont++;
-}
+} */
 const Add=(event)=>{
   event.preventDefault();
 
-  Salvar();
+  //Salvar();
 
   const Div = document.createElement('div');
   Div.classList.add("the-div");
